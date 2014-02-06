@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Super lander</title>
+    <link rel="stylesheet" href="web/super_lander.css">
+    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+   <canvas id="canvas"></canvas>
+   <section id="menu-wrap">
+    <menu id="menu">
+      <section id="controls">
+      
+      <h3>Controls:</h3>
+      <ul>
+        <li><strong>W</strong> increase acceleration</li>
+        <li><strong>S</strong> decrease acceleration</li>
+        <li><strong>A</strong> clockwise rotation</li>
+        <li><strong>D</strong> counter-clockwise rotation</li>
+      </ul>
+      </section>
+      <section id="transition1"></section>
+      <section id="main">
+       <button id="play">Play</button> on
+        <select id="stage">
+          <option value="mars" selected="selected">Mars</option>
+          <option value="luna">Luna</option>
+          <option value="random">Random</option>
+        </select>
+      </section>
+      <section id="transition2"></section>
+      <!--social buttons-->
+      <section id="social">
+        <a target="_blank" href="https://twitter.com/share?hashtags=super-lander&text=You can land on Mars in this game. How awesome is this?" id="twitter-share-button" data-lang="en">Tweet</a>
+        <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://twach.org/sl/super-lander.html&t=You can land on Mars in this game. How awesome is this?" id="facebook-share-button"  data-lang="en">Share</a>
+        <!--a target="_blank" href="https://plus.google.com/share?url=http://twach.org/sl/super-lander.html"  id="google-share-button" data-lang="en">Google+</a-->
+        <a target="_blank" href="http://vkontakte.ru/share.php?url=http://twach.org/sl/super-lander.html&title=Super Lander&description=В этой игре ты приземляешься на Марс. Насколько это круто?"  id="vk-share-button" data-lang="en">VK</a>
+        <a target="_blank" href="https://github.com/Hermanya/lander" id="github-button">GitHub</a>
+      </section>
+    </menu>
+   </section>
+    <aside id="statistics">
+       <label for="fuel: ">fuel:</label>
+      <span id="fuel"></span>
+       <label for="altitude: ">altitude:</label>
+      <span id="altitude"></span>
+    </aside>
+    <section id="congratulation">
+      <div>
+        <h2>You successfully landed! Flawless performance!</h2>
+        <button id="win-reload">OK</button>
+      </div>
+    </section>
+    <section id="commiseration">
+      <div>
+        <h2>Wasted! Surely you can do better!</h2>
+        <button id="fail-reload">OK</button>
+      </div>
+    </section>
+    <script type="application/dart" src="web/super_lander.dart"></script>
+    <script src="web/packages/browser/dart.js"></script>
+    
+  </body>
+</html>
